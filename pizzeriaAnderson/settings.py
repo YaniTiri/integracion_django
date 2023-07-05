@@ -30,6 +30,14 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+APPS_CUSTOM = [
+    "app_pizzas"
+]
+
+EXTERNALS = [
+    "rest_framework"
+]
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -38,6 +46,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
+
+INSTALLED_APPS += APPS_CUSTOM
+INSTALLED_APPS += EXTERNALS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

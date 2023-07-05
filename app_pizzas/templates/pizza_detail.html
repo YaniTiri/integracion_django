@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main>
+    <div class="main">
+        <h1>{{pizza.nombre}}</h1>
+        {% for label, value in pizza.get_fields %}
+
+        <p>{{label | upper}}</p>
+        <p>{{value}}</p>
+
+        {% endfor %}
+
+        <a href="{% url 'pizzas:all' %}">BACK</a>
+    </div>
+</main>
+{% endblock %}

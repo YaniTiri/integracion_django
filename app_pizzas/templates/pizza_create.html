@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main>
+    <div class="main">
+        <h1>CREAR PIZZA</h1>
+        <form method="post">
+
+            {% csrf_token %}
+            <div>{{form.as_p}}</div>
+            <input type="submit" value="{{ tipo }}" />
+
+        </form>
+
+        <a href="{% url 'pizzas:all' %}">Volvamos al Inicio</a>
+    </div>
+</main>
+{% endblock %}

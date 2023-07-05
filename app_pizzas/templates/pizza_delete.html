@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+
+<main>
+    <div class="main">
+        <h1>Estas seguro ue deseas borrar esta pizza?</h1>
+        <h2>{{pizza.nombre}}</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div>{{form.as_p}}</div>
+            <input type="submit" value="{{ tipo }}" />
+        </form>
+
+        <a href="{% url 'pizzas:all' %}">Cancelar</a>
+    </div>
+</main>
+{% endblock %}

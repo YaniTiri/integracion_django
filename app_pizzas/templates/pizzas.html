@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+    <div class="main">
+        <h1>Todas las pizzas</h1>
+        <h2><a href="{% url 'pizzas:create' %}">CREAR PIZZA</a></h2>
+        {% for pizza in pizza_list%}
+        <div class="list">
+            <span>
+                <p>{{forloop.counter}}</p>
+            </span>
+            <span>
+                <p>{{pizza.nombre}}</p>
+            </span>
+            <span>
+                <label for="">Detalle: </label>
+                <a href="{% url 'pizzas:detail' pizza.id %}">+</a>
+            </span>
+            <span>
+                <label for="">Editar: </label>
+                <a href="{% url 'pizzas:update' pizza.id %}">+</a>
+            </span>
+            <span>
+                <label for="">Borrar: </label>
+                <a href="{% url 'pizzas:delete' pizza.id %}">+</a>
+            </span>
+        </div>
+
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
