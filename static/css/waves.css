@@ -1,0 +1,18 @@
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    background: url("../img/backgrounds/wave.png");
+    animation: animate 20s linear infinite;
+}
+
+.top-wave .shape-fill {
+    fill: rgba(13, 22, 33, 255);
+    width: 5px;
+}
+
+.svg-invertido {
+    transform: scaleY(-1);
+}

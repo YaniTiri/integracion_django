@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content%}
+        <main>
+            <div class="banner" id="banner">
+                <div class="banner_pic"><img src="{% static './img/anderson_foto.png'%}" alt="anderson" /></div>
+                <div class="banner_tex">
+                    <p>
+                        if (persona.includes("hambre")) { <br />
+                        console.log("Llamar a Anderson's Pizza");<br />
+                        } else {<br />
+                        console.log("No hay hambre");<br />
+                        }
+                    </p>
+                </div>
+            </div>
+            <div class="top-wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"
+                    ></path>
+                </svg>
+            </div>
+
+            <div class="row about light-color" id="about" data-aos="fade-up" data-aos-duration="500">
+                <h1>Sobre Nosotros</h1>
+                <div class="about_text col-md-6">
+                    <p>
+                        En Anderson's pizza somos fieles a la idea de que consumir pizza nos ayuda a concentrarnos mientras aprendemos programación.<br />
+                        Promovemos la explicación de código a través del uso de sitios web de pizzas ( y aprovechamos para aclarar que no le envidiamos nada a la página de Kentucky).<br />
+                        Consideramos que la pizza es una recompensa al esfuerzo.<br />
+                        Por eso, si contestas correctamente nuestro quiz de preguntas frikis sobre computadoras te hacemos un 15% de descuento en tu próxima pizza!!!<br />
+                        Inténtalo, no te vas a arrepentir.
+                    </p>
+                    <button class="light-btn" id="miBoton" onmouseover="cambiarTexto('Hacer el quiz')" onmouseout="cambiarTexto('DALE GAS!!!')" onclick="iniciarCuestionario()">DALE GAS!!!</button>
+                    <div class="cuestionario" id="cuestionario" style="display: none;">
+                        <h2>Responde con false o true</h2>
+                        <div id="preguntas"></div>
+                        <div class="calificar"><button class="light-btn" onclick="calificarRespuestas()">Enviar respuestas</button></div>
+                    </div>
+                    <div id="resultado" style="display: none;">
+                        <img id="imagenResultado" src="" alt="Resultado" />
+                        <p id="mensajeResultado"></p>
+                        <p><span id="codigoDescuento"></span></p>
+                    </div>
+                </div>
+                <div class="about_image col-md-6 about-me">
+                    <img src="{% static './img/about.png'%}" alt="about" />
+                    <figcaption>
+                        *** Anderson's pizza es consciente de que para que la imagen superior sea representativa podria hacer falta agregar un michi y/o un cafe.
+                    </figcaption>
+                </div>
+                <div class="top-wave svg-invertido">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path
+                            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                            class="shape-fill"
+                        ></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="carta" id="carta">
+                <div>
+                    <h1>Carta</h1>
+                     <h1 class="titulocarta">¡Conocé Nuestras Variedades!</h1>
+                </div>
+            <!-- <div class="tarjetas-container" id="tarjetas-container" data-aos="zoom-in-right" data-aos-duration="500"></div>--> 
+            <div class="menu-page">
+                <!-- <div class="foto-menu"></div> -->
+                <!-- <div class="titulo-menu"> <h1>¡Conocé Nuestras Variedades!</h1></div> -->
+                <div class="contenedor-menu">
+                    <div class="conten"><div class="pizzas"> <img src="{% static './img/atactrueno.jpg'  %}" alt="Pizza Atactrueno"><div class="mascara_img"> <h1>Pizza 'Atactrueno' Pikachu!!!⚡ </h1></div> </div></div>
+                    <div class="conten"><div class="pizzas"> <img src="{% static './img/totoro.jpg'%}" alt="Pizza 'Totoro"><div class="mascara_img"><h1>Pizza 'Totoro', somos tus vecinos!!!😻 </h1></div> </div></div>
+                    <div class="conten"><div class="pizzas"> <img src="{% static './img/fatality.jpg'%}" alt="Pizza Fatality"><div class="mascara_img"><h1>Pizza 'Fatality', Finish this pizza!!!💪</h1></div> </div></div>
+                    <div class="conten"><div class="pizzas"> <img src="{% static './img/yoda.jpg'%}" alt="Pizza 'Si pizza tu quieres'"><div class="mascara_img"><h1>Pizza 'Si pizza tu quieres' ...llamar a Anderson's pizza tu debes📞</h1></div> </div></div>
+                    <div class="conten"><div class="pizzas"> <img src="{% static './img/ungranpoder.jpg'%}" alt="Pizza 'Un gran poder'"><div class="mascara_img"><h1>Pizza 'Un gran poder', conlleva una gran responsabilidad👴</h1></div> </div></div>
+                    <div class="conten"><div class="pizzas"> <img src="{% static './media/img-menu/pizza6.jpg'%}" alt="Pizza de Pollo"><div class="mascara_img"><h1>Pizza de Pollo</h1></div> </div></div>
+                    <div class="conten"><div class="pizzas"> <img src="{% static './media/img-menu/pizza7.jpg'%}" alt="Pizza de Espinaca"><div class="mascara_img"><h1>Pizza de Espinaca</h1></div> </div></div>
+                    <div class="conten"><div class="pizzas"> <img src="{% static './media/img-menu/pizza8.jpg'%}" alt="Pizza Cuatro Estaciones"><div class="mascara_img"><h1>Pizza Cuatro Estaciones</h1></div> </div></div>
+                    <div class="conten"><div class="pizzas"> <img src="{% static './media/img-menu/pizza9.jpg'%}" alt="Pizza de Salame"><div class="mascara_img"><h1>Pizza Pepperoni</h1></div> </div></div>
+                    <div class="conten"><div class="pizzas"> <img src="{% static './media/img-menu/pizza10.jpg'%}" alt="Pizza del Chef"><div class="mascara_img"><h1>Pizza del Chef</h1></div> </div></div>
+                    
+                    
+                </div>
+            </div>
+            </div>
+            <div class="top-wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"
+                    ></path>
+                </svg>
+            </div>
+
+            <div class="contact" id="contact" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                <h1>Contactanos!</h1>
+                <div class="tarjeta_contacto">
+                    <p>Dias y Horarios De Atención</p>
+                    <p>Miercoles y viernes de 17 hs a 18:30 hs</p>
+                </div>
+                <div class="contact-box" data-aos="zoom-in-right" data-aos-duration="500">
+                    <div class="mapa">
+                        <div style="width: 100%;">
+                            <div style="width: 100%;">
+                                <iframe
+                                    scrolling="no"
+                                    marginheight="0"
+                                    marginwidth="0"
+                                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Carlos%20H.%20Perette%20750+(Anderson%C2%B4s%20Pizza)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                                    width="100%"
+                                    height="600"
+                                    frameborder="0"
+                                >
+                                    <a href="https://www.maps.ie/distance-area-calculator.html">measure area map</a>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <form id="form">
+                            <div class="info-required">
+                                <label for="name">Name *</label>
+                                <input type="text" name="name" id="name" placeholder="Enter your name" autocomplete="off" required pattern="[a-zA-Z]+" />
+                            </div>
+                            <div class="info-required">
+                                <label for="email">Email *</label>
+                                <input type="email" name="email" id="email" placeholder="Enter your email" autocomplete="on" required />
+                            </div>
+                            <div class="info-required">
+                                <label for="phone">Phone Number</label>
+                                <input type="text" name="phone" id="phone" placeholder="Enter your phone number" autocomplete="on" pattern="[0-9]+" minlength="8" maxlength="10" />
+                            </div>
+                            <div class="info-required">
+                                <label for="message">Message *</label>
+                                <textarea type="text" name="message" id="message" placeholder="Enter message" rows="5" cols="33"></textarea>
+                            </div>
+                            <button class="light-btn" type="submit" onclick="return sendEmail();">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+{% endblock %}

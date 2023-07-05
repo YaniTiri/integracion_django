@@ -1,0 +1,42 @@
+.btn-style {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-style::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: -webkit-transform 200ms ease-in;
+  transition: transform 200ms ease-in;
+  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+}
+
+.btn-style:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+
+.light-btn {
+  background-color: #f0f322;
+  text-decoration: none;
+  border-radius: 20px;
+  color: #010038;
+  transition: 0.5s;
+}
+
+.light-btn:hover {
+  border: 2px solid #f9f9fc;
+  background-color: #f0f322;
+  box-shadow: inset 0 0 20px 0 #f39422;
+}

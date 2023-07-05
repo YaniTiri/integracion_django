@@ -1,0 +1,15 @@
+{
+    "pizza": [
+        {
+            "id": "Yo soy tu padre",
+            "nombre": "Pizza 'Yo soy tu padre'",
+            "descripcion": "Noooooo!!!😡",
+            "ruta": "./img/yosoytupadre.jpg"
+        },
+        { "id": "pikachu", "nombre": "Pizza 'Atactrueno'", "descripcion": "Pikachu!!!⚡", "ruta": "./img/atactrueno.jpg" },
+        { "id": "totoro", "nombre": "Pizza 'Totoro'", "descripcion": "Vas a querer que seamos tus vecinos", "ruta": "./img/totoro.jpg" },
+        { "id": "kombat", "nombre": "  Pizza 'Fatality'", "descripcion": "Finish this pizza!!!💪", "ruta": "./img/fatality.jpg" },
+        { "id": "yoda", "nombre": "Pizza 'Si pizza tu quieres'", "descripcion": "llamar a Anderson's pizza tu debes📞", "ruta": "./img/yoda.jpg" },
+        { "id": "spider", "nombre": "Pizza 'Un gran poder'", "descripcion": "conlleva una gran responsabilidad👴", "ruta": "./img/ungranpoder.jpg" }
+    ]
+}

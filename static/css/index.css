@@ -1,0 +1,1257 @@
+
+/*ARCHIVO DE ESTILOS PRINCIPAL*/
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@500;600&display=swap");
+
+/*==================================================== FORMATO GENERAL=======================================================*/
+
+body {
+    background-color: rgb(198, 22, 22);
+    font-family: "Raleway", sans-serif;
+}
+
+main {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+
+.carta,
+.contact,
+.about h1 {
+    text-align: center;
+    font-family: "Kaushan Script", cursive;
+    font-size: 40px;
+    color: #f39422;
+}
+
+/*====================================================MENU=======================================================*/
+.padre {
+    width: 100%;
+    display: flex;
+    height: auto;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+}
+
+.menu {
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-flow: row nowrap;
+    height: auto;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.margen-interno {
+    padding: 0px 65px;
+    justify-content: center;
+}
+
+.logo {
+    color: yellow;
+    text-shadow: 5px 5px black;
+    text-align: center;
+    flex: 1 1 auto;
+}
+.logo a {
+    color: white;
+    font-size: 30px;
+}
+.logo a:hover {
+    color: #343434;
+}
+.nav {
+    flex: 5 1 auto;
+}
+.nav a {
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 2px;
+}
+.nav a:hover {
+    color: #343434;
+}
+.social_text {
+    display: none;
+}
+.social {
+    display: flex;
+    text-align: center;
+}
+.social a {
+    font-size: 20px;
+    color: white;
+    padding: 0 5px;
+    margin: 0 0 0 30px;
+    display: flex;
+    align-items: center;
+}
+.social a:hover {
+    color: #343434;
+}
+
+.social p {
+    font-size: 20px;
+    color: white;
+    padding: 0 5px;
+    margin: 0 0 0 30px;
+}
+
+.fa-brands {
+    font-size: 25px;
+}
+
+.fa-instagram {
+    margin-top: 2px;
+}
+/*-------------------------------------------MENU2-----------------------------------------------------*/
+.menu-page {
+   
+    width: 100%;
+    background-color: rgb(119, 119, 119);
+    /* max-width: 1900px; */
+    /* min-height: 600px; */
+    text-align: center;
+    
+   
+   
+ 
+    
+    
+}
+
+.foto-menu{
+    
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+    width: 100%;
+    background: url(../media/img-menu/menuPage2.jpg) center;
+    background-size: cover;
+   
+}
+
+.titulo-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 5px 5px 5px black;
+    padding: 2rem;
+    background-color: red;
+   
+   
+
+}
+
+.titulo-menu h1{
+    color: yellow;
+    
+     animation-duration: 3s;
+     animation-name: tituloAnim;
+       /* animation-iteration-count:3; 
+       animation-direction:alternate;   */
+   
+   
+}
+.contenedor-menu{
+    display: flex;
+    width: 100vw;
+    max-width: 1900px;
+    min-height: 600px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+   
+}
+.conten{
+   
+   overflow: hidden;
+   line-height: 0;
+   
+   
+}
+.pizzas {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 50ms ease-out;
+    
+
+}
+
+.mascara_img {
+   position: absolute;
+   display: flex;
+    top:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(35,31,32,.8);
+    opacity:0;
+    
+    z-index:1;
+}
+
+.mascara_img h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* margin-top: 150px; */
+    line-height: normal;
+    padding: 10px;
+}
+
+.pizzas:hover{
+    cursor: pointer;
+    transform: scale(1.075);
+    
+}
+
+.pizzas:hover  .mascara_img{
+    opacity: 0.8;
+}
+
+.pizzas:hover  .mascara_img h1{
+    opacity: 1;
+    color: white;
+}
+@keyframes tituloAnim {
+    from {
+      margin-right: -100%;
+      width: 300%
+    }
+    30%{
+    margin-left: -50%;
+     
+    width: 100%;
+
+   }  
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+/*------------------------------------------MEDIAQ-------------------------------------------------------*/
+@media (max-width: 579px) {
+    header .menu {
+        display: block;
+        justify-content: center;
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+    .margen-interno {
+        padding: 0px 25px;
+        justify-content: center;
+    }
+    
+    .social p {
+        display: none;
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .social a{
+        padding: 0px;
+        margin: 0px 20px;
+    }
+   
+
+}
+
+@media screen and (min-width: 580px) and (max-width: 750px) {
+    .nav a {
+        font-size: 12px;
+        margin-left: 12px;
+    }
+    .margen-interno{
+        padding: 0px 20px;
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+    .social p{
+        font-size: 15px;
+    }
+
+    .social a {
+        display: flex;
+        align-items: center;
+    }
+
+
+}
+/*====================================================BANNER=======================================================*/
+
+.banner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 22, 33, 255);
+    background-image: url("../img/backgrounds/anderson.png");
+    background-size: cover;
+}
+
+.banner img {
+    width: clamp(400px, 100vw, 400px);
+}
+
+.banner p {
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing 2s steps(400), blink 0.5s infinite step-end alternate;
+    overflow: hidden;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    width: 100%;
+}
+
+.banner_tex,
+.banner_pic {
+    flex: 1;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media screen and (min-width: 580px) and (max-width: 1046px) {
+    .banner {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .banner p {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .banner {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .banner p {
+        font-size: medium;
+    }
+    .banner img {
+        width: clamp(300px, 30vw, 30px);
+    }
+}
+/*====================================================ABOUT=======================================================*/
+.about {
+    align-items: center;
+    justify-content: center;
+}
+
+.about_image img {
+    padding-top: 20px;
+    width: 80%;
+}
+
+.about_image figcaption {
+    display: inline-block; /* Hace que el figcaption ocupe el ancho disponible */
+    width: 80%;
+    text-align: left;
+}
+
+.about_text {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    justify-content: center;
+}
+.about_text p {
+    align-items: center;
+    margin-left: 30px;
+    gap: 10px;
+}
+.about p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.about figcaption {
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+}
+
+@media (max-width: 766px) {
+    .about_text {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 25px;
+        justify-content: center;
+    }
+}
+
+.cuestionario {
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.cuestionario h2 {
+    font-size: 23px;
+}
+
+.calificar {
+    padding-top: 20px;
+}
+
+#preguntas p {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+#resultado {
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 20px;
+    height: auto;
+    align-items: center;
+    margin-left: 25%;
+    justify-content: center;
+}
+
+#imagenResultado {
+    margin-top: 20px;
+    width: clamp(200px, 40vw, 200px);
+    border-radius: 20px;
+    align-items: center;
+}
+
+@media (max-width: 412px) {
+    .about p{
+        font-size: medium
+   ;}
+   .about h1{
+    font-size: 30px;
+   }
+
+   #imagenResultado {
+    margin-top: 20px;
+    width: clamp(150px, 50vw, 150px);
+    border-radius: 20px;
+    align-items: center;
+}
+
+#resultado {
+    padding: 5px;
+
+}
+#resultado p {
+    margin-left: 0;
+    justify-content: center;
+}
+
+   
+ 
+}
+/*====================================================CARTA2=======================================================*/
+.menu-page {
+   
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+    /* max-width: 1900px; */
+    /* min-height: 600px; */
+    text-align: center;
+    
+   
+   
+ 
+    
+    
+}
+/*
+.foto-menu{
+    
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+    width: 100%;
+    background: url(../media/img-menu/menuPage2.jpg) center;
+    background-size: cover;
+   
+}*/
+
+
+.titulo-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 5px 5px 5px black;
+    padding: 2rem;
+    background-color: rgb(46, 46, 46);
+   
+   
+
+}
+
+.titulo-menu h1{
+    color: yellow;
+    
+     animation-duration: 3s;
+     animation-name: tituloAnim;
+       /* animation-iteration-count:3; 
+       animation-direction:alternate;   */
+   
+   
+}
+.contenedor-menu{
+    display: flex;
+    width: 100vw;
+    padding-bottom: 50px;
+    max-width: 1900px;
+    min-height: 600px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(13, 22, 33);
+    
+   
+}
+.conten{
+   
+   overflow: hidden;
+   line-height: 0;
+   
+   
+}
+.pizzas {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 50ms ease-out;
+    
+
+}
+
+.mascara_img {
+   position: absolute;
+   display: flex;
+    top:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(35,31,32,.8);
+    opacity:0;
+    
+    z-index:1;
+}
+
+.mascara_img h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* margin-top: 150px; */
+    line-height: normal;
+    padding: 10px;
+}
+
+.pizzas:hover{
+    cursor: pointer;
+    transform: scale(1.075);
+    
+}
+
+.pizzas:hover  .mascara_img{
+    opacity: 0.8;
+}
+
+.pizzas:hover  .mascara_img h1{
+    opacity: 1;
+    color: white;
+}
+@keyframes tituloAnim {
+    from {
+      margin-right: -100%;
+      width: 300%
+    }
+    30%{
+    margin-left: -50%;
+     
+    width: 100%;
+
+   }  
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+@media screen and (max-width:320px) {
+    .conten{
+        width: 100vw;
+    }
+    .pizzas img{
+        
+        width: 100%;
+    }
+    .titulo-menu{
+        font-size: 1rem;
+        padding: 0.5rem;
+        height: 6rem;
+    }
+    .mascara_img {
+        position: absolute;
+        top:0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        align-items: center;
+        
+        background: none;
+        opacity: 1;
+        
+        z-index:1;
+    }
+        
+        
+     .mascara_img h1 {
+        
+        font-size: 26px;
+        text-shadow: 2px 2px 5px  rgb(0, 0, 0);
+        margin-top: 0px;
+        opacity:1;
+        color: rgb(255, 255, 255); 
+    } 
+         
+    .pizzas:hover  .mascara_img h1{
+        opacity: 1;
+        color: rgb(255, 255, 255);
+    }
+    
+}
+@media screen and (min-width:320px) {
+    .conten{
+        width: 100vw;
+    }
+    .pizzas img{
+        
+        width: 100%;
+    }
+    .titulo-menu{
+        
+        font-size: 1rem;
+        padding: 0.5rem;
+        height: 6rem;
+        
+       
+    }
+    .mascara_img {
+        position: absolute;
+        top:0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        align-items: center;
+        
+        background: none;
+        opacity: 1;
+        
+        z-index:1;
+    }
+        
+        
+     .mascara_img h1 {
+        
+        font-size: 26px;
+        text-shadow: 2px 2px 5px  rgb(0, 0, 0);
+        margin-top: 0px;
+        opacity:1;
+        color: rgb(255, 255, 255); 
+    } 
+         
+    .pizzas:hover  .mascara_img h1{
+        opacity: 1;
+        color: rgb(255, 255, 255);
+    }
+    
+}
+
+@media screen and (min-width:450px) {
+     .conten{
+        width: calc(100vw/2);
+    } 
+    .pizzas img{
+        
+        width: 100%;
+    }
+        
+    .titulo-menu{
+        font-size: 1rem;
+        padding: 0.5rem;
+        height: 6rem;
+        
+    }
+    .mascara_img {
+        position: absolute;
+        top:0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        align-items: center;
+        
+        background: none;
+        opacity: 1;
+        
+        z-index:1;
+    }
+        
+        
+     .mascara_img h1 {
+        
+        font-size: 20px;
+        text-shadow: 2px 3px 5px  rgb(0, 0, 0,100);
+        margin-top: 0px;
+        opacity:1;
+        color: rgb(255, 255, 255); 
+    } 
+         
+    .pizzas:hover  .mascara_img h1{
+        opacity: 1;
+        color: rgb(255, 255, 255);
+       
+    }
+}
+          
+@media screen and (min-width:600px) {
+ 
+    .conten {
+        
+        width: 50%;
+    }
+    .pizzas img{
+        
+        width: 100%;
+    }
+
+    .titulo-menu{
+        font-size: 1rem;
+        padding: 0.5rem;
+        height: 8rem;
+    }
+    .mascara_img {
+        position: absolute;
+        top:0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        align-items: center;
+        
+        background: none;
+        opacity: 1;
+        
+        z-index:1;
+    }
+        
+        
+     .mascara_img h1 {
+       /* touch-action: auto;*/
+        font-size: 26px;
+        text-shadow: 2px 2px 5px  rgb(0, 0, 0);
+         margin-top: 0px;
+         font-weight:bold;
+         opacity:1;
+         color: rgb(255, 255, 255); 
+    } 
+    .pizzas:hover  .mascara_img h1{
+        opacity: 1;
+        color: rgb(255, 255, 255);
+    }
+        
+             
+    
+    
+    
+}
+
+@media screen and (min-width:800px) {
+    .conten {
+        
+        width: calc(100%/3);
+    }
+    .pizzas img{
+        
+        width: 100%;
+    }
+    .titulo-menu{
+        font-size: 1.5rem;
+        text-align: center;
+        
+        padding: 1.5rem;
+        background-color: red;
+       
+     
+     }
+}
+
+@media screen and (min-width:1200px) {
+         .conten {
+            
+            width: calc(100%/5);
+        } 
+        .pizzas img{
+            
+            width: 100%;
+        }
+        .titulo-menu{
+            font-size: 2rem;
+            text-align: center;
+            
+            padding: 2rem;
+            background-color: red;
+           
+         
+         }
+         
+         .titulo-menu h1{
+             color: yellow;
+         }
+         .contenedor-menu{
+             display: flex;
+             width: 100vw;
+             max-width: 1900px;
+             min-height: 400px;
+             flex-wrap: wrap;
+             justify-content: center;
+             
+            
+         }
+         .conten{
+            
+            overflow: hidden;
+         }
+         .pizzas {
+         
+             position: relative;
+             width: 100%;
+             height: 100%;
+             text-align: center;
+             transition: all 50ms ease-out;
+             
+         
+         }
+         
+         .mascara_img {
+            position: absolute;
+            display: flex;
+             /* top:0; */
+             width: 100%;
+             height: 100%;
+             text-align: center;
+             align-items: center;
+             justify-content: center;
+             background-color:rgba(35,31,32,.8);
+             opacity:0;
+             
+             z-index:1;
+         }
+         
+         .mascara_img h1{
+             
+             padding: 10px;
+            
+         }
+         
+         .pizzas:hover{
+             cursor: pointer;
+             transform: scale(1.075);
+             
+         }
+         
+         .pizzas:hover  .mascara_img{
+             opacity: 0.8;
+         }
+         
+         .pizzas:hover  .mascara_img h1{
+             opacity: 1;
+             color: white;
+         }
+
+/*====================================================CARTA=======================================================*/
+.carta {
+    align-items: center;
+    background-color: rgba(13, 22, 33, 255);
+    height: auto;
+    justify-content: center;
+    margin-top: -2px;
+    width: 100%;
+}
+
+.titulocarta {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.titulocarta-animacion {
+    animation-duration: 3s;
+    animation-name: tituloAnim;
+}
+
+@keyframes tituloAnim {
+    from {
+        margin-right: -100%;
+        width: 300%;
+    }
+    30% {
+        margin-left: -50%;
+
+        width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.tarjetas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin-left: 9%;
+}
+
+.tarjeta {
+    border: 1px solid #ccc;
+    margin-right: 20px;
+    width: 330px;
+    margin-bottom: 20px;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    transition: all 50ms ease-out;
+}
+
+.tarjeta:hover {
+    cursor: pointer;
+    transform: scale(1.075);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+}
+
+.tarjeta h3 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta:hover h3 {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.tarjeta p {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 20px;
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    color: white;
+    opacity: 0;
+}
+
+.tarjeta:hover p {
+    opacity: 1;
+}
+
+@media (max-width: 429px) {
+    .tarjetas-container{
+        margin-left: 12%;
+    }
+
+    .carta {
+        padding-bottom: 70px;
+    }
+}
+
+
+/*====================================================CONTACT=======================================================*/
+
+.contact {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: rgb(198, 22, 22);
+}
+
+.contact h1 {
+    margin-top: -50px;
+}
+
+.mapa {
+    border-radius: 2rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: 1.5rem;
+    overflow: hidden;
+    height: auto;
+    width: auto;
+}
+
+.tarjeta_contacto {
+    background-color: rgba(13, 22, 33, 255);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    margin: 1.5rem;
+    overflow: hidden;
+}
+
+.tarjeta_contacto p {
+    padding: 10px 15px 0px 15px;
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+}
+
+.contact-box {
+    width: clamp(500px, 80vw, 1000px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(13, 22, 33, 255);
+    box-shadow: 0px 0px 15px 5px #f39422;
+    border-radius: 20px;
+    margin-bottom: 60px;
+}
+
+.left-side {
+    height: 320px;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side img {
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.info-required {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.right-side form input,
+.right-side form textarea {
+    border: 2px solid #f39422;
+    background-color: rgb(255, 255, 255);
+    font-size: clamp(14px, 3vw, 16px);
+    font-family: "Poppins", sans-serif;
+    color: rgba(13, 22, 33, 255);
+    border-radius: 10px;
+    text-indent: 7px;
+}
+
+.right-side form input {
+    height: 30px;
+    width: clamp(250px, 60vw, 400px);
+}
+
+.right-side form textarea {
+    height: clamp(100px, 60vw, 200px);
+    width: clamp(250px, 60vw, 400px);
+    max-height: clamp(100px, 60vw, 200px);
+    max-width: clamp(250px, 60vw, 400px);
+}
+
+.right-side form label {
+    color: #f39422;
+    font-size: clamp(12px, 5vw, 16px);
+    font-weight: bold;
+}
+
+.right-side form button {
+    border: none;
+    padding: 5px 20px;
+    font-size: clamp(12px, 5vw, 16px);
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 5px 50px;
+}
+
+@media screen and (max-width: 1040px) {
+    .contact-box {
+        grid-template-columns: 1fr;
+        width: clamp(200px, 80vw, 500px);
+    }
+
+    .left-side {
+        height: 150px;
+        margin-bottom: 30px;
+    }
+
+    .left-side img {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+
+
+    .mapa {
+        height: 300px;
+    }
+
+    .tarjeta_contacto p {
+        font-size: 12px;
+    }
+
+    .info-required {
+
+        margin-bottom: 10px;
+
+    }
+    .right-side{
+        padding-top: 0%;
+    }
+
+    .contact{
+        padding-bottom: 0%;
+    }
+}
+
+
+/*====================== FOOTER ======================*/
+
+footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: rgba(13, 22, 33, 255);
+    bottom: 0%;
+    margin-top: -1px;
+}
+
+footer h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: clamp(9px, 5vw, 16px);
+    padding: 20px;
+}
+
+footer h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: clamp(9px, 5vw, 16px);
+    padding: 20px;
+}
+
+footer img {
+    width: clamp(80px, 20vw, 80px);
+    border-radius: 10px;
+}
+
+@media (max-width: 412px) {
+    footer h2 {
+        font-size: small;
+    }
+
+    footer img {
+        width: clamp(70px, 20vw, 70px);
+        border-radius: 10px;
+    }
+
+}
+
+
